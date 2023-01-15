@@ -1,4 +1,4 @@
-package lectureTen;
+package exercises.lectureTen;
 import org.testng.annotations.Test;
 public class GroupTests {
     @Test(groups = "smoke")

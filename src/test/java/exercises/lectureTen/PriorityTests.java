@@ -1,4 +1,4 @@
-package lectureTen;
+package exercises.lectureTen;
 
 import org.testng.annotations.Test;
 
@@ -13,7 +13,7 @@ public class PriorityTests {
         System.out.println("This is the third priority test");
     }
 
-    @Test(priority = -1)
+    @Test(priority = -1) //priority starts with the lowest priority
     public void testPriorityFirst() {
         System.out.println("This is the first priority test");
     }

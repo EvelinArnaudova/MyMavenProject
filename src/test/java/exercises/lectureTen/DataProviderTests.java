@@ -1,4 +1,4 @@
-package lectureTen;
+package exercises.lectureTen;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -6,7 +6,10 @@ import org.testng.annotations.Test;
 public class DataProviderTests {
     @DataProvider(name = "generateValues")
     public Object[][] generateValues() {
-        return new Object[][]{{"First-Value"}, {"Second-Value"}};
+        return new Object[][]{
+                {"First-Value"}, //ще се изпълни два пъти с отделните стойности
+                {"Second-Value"}
+        };
     }
 
     @Test(dataProvider = "generateValues")
@@ -16,7 +19,10 @@ public class DataProviderTests {
 
     @DataProvider(name = "generateNumbers")
     public Object[][] generateNumbers() {
-        return new Object[][]{{2, 3, 5}, {5, 7, 9}};
+        return new Object[][]{
+                {2, 3, 5},
+                {5, 7, 9}
+        };
     }
 
     @Test(dataProvider = "generateNumbers")
