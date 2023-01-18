@@ -3,13 +3,13 @@
 <suite name="Web test suite" verbose="1">
     <test name="Smoke Tests">
         <classes>
-            <class name="exercises.lectureTen.GroupTests"></class>
+            <class name="examples.lectureTen.GroupTests"></class>
         </classes>
     </test>
     <test name="Regression Tests">
         <classes>
-            <class name="exercises.lectureTen.DataProviderTests"></class>
-            <class name="exercises.lectureTen.PriorityTests"></class>
+            <class name="examples.lectureTen.DataProviderTests"></class>
+            <class name="examples.lectureTen.PriorityTests"></class>
         </classes>
     </test>
 </suite>

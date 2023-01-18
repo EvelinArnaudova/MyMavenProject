@@ -3,7 +3,7 @@
 <suite name="Lecture 10 Exercises suite" verbose="1" parallel="methods" thread-count="4">
     <test name="Lecture 10 Exercises Tests">
         <classes>
-            <class name="exercises.lectureTen.ExercisesTests"/>
+            <class name="exercises.ExercisesTests"/>
         </classes>
     </test>
 </suite>

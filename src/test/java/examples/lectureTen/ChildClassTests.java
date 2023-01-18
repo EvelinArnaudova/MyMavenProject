@@ -1,4 +1,4 @@
-package exercises.lectureTen;
+package examples.lectureTen;
 import org.testng.annotations.*;
 public class ChildClassTests extends BaseClassTests {
     @BeforeMethod

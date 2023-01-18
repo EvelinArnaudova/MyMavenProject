@@ -1,4 +1,4 @@
-package exercises.lectureTen;
+package examples.lectureTen;
 import org.testng.annotations.Test;
 public class DependencyTests {
     @Test(dependsOnGroups = "group.dependency") // then the depends on groups methods
