@@ -12,7 +12,7 @@ public class Examples {
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-        testMyFirstWebDriver();
+        testCommonCommands();
     }
 
     private static void testMyFirstWebDriver() {
