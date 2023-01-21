@@ -6,7 +6,7 @@
             <class name="examples.lectureTen.ParametersTests">
                 <methods>
                     <include name="testSingleParameter">
-                        <parameter name="full-name" value="Evelin Test"></parameter>
+                        <parameter name="full-name" value="Evelin Arnaudova"></parameter>
                     </include>
                     <include name="testMultiParameters">
                         <parameter name="num1" value="3"></parameter>

@@ -8,3 +8,10 @@
         </classes>
     </test>
 </suite>
+<suite name="TestNG homework" verbose="1" parallel="methods" thread-count="2">
+<test name="Homework">
+    <classes>
+        <class name="homeworks.LectureTen"></class>>
+    </classes>
+</test>
+</suite>
