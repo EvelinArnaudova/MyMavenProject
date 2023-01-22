@@ -29,11 +29,20 @@ public class LectureTwelve {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        WebElement username = driver.findElement(By.xpath("//input[@type=\"email\"]"));
-        username.click();
-        username.clear();
+        WebElement email = driver.findElement(By.xpath("//input[@type=\"email\"]"));
+        email.click();
+        email.clear();
+        email.sendKeys("evelin@test.com");
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement password = driver.findElement(By.xpath("//input[@type=\"password\"]"));
+        password.click();
+        password.clear();
+        password.sendKeys("123456");
+
+        WebElement loginButton = driver.findElement(By.xpath("//button[@class=\"submit-button initial\"]"));
+        loginButton.click();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.close();
 
 
