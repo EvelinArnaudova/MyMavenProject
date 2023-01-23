@@ -18,7 +18,6 @@ public class LectureTwelve {
         driver.get("https://www.esky.bg/");
 
         WebElement cookie = driver.findElement(By.xpath("//*[@id=\"qc-cmp2-ui\"]/div[2]/div/button[2]/span"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         cookie.click();
 
         WebElement login = driver.findElement(By.xpath("//*[@class=\"account-title\"]"));
@@ -26,8 +25,6 @@ public class LectureTwelve {
 
         WebElement loginType = driver.findElement(By.xpath("//ul/li[3]/span"));
         loginType.click();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         WebElement email = driver.findElement(By.xpath("//input[@type=\"email\"]"));
         email.click();
@@ -42,7 +39,6 @@ public class LectureTwelve {
         WebElement loginButton = driver.findElement(By.xpath("//button[@class=\"submit-button initial\"]"));
         loginButton.click();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.close();
 
 
