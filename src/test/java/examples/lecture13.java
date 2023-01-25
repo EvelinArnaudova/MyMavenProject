@@ -2,8 +2,12 @@ package examples;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,25 +15,30 @@ import java.time.Duration;
 
 public class lecture13 {
 
-    @Test
+    @Test //(invocationCount = 5)
     public void testLogin(){
 
         WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.get("http://training.skillo-bg.com:4300/posts/all");
 
         WebElement loginButton = driver.findElement(By.id("nav-link-login"));
         loginButton.click();
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.urlToBe("http://training.skillo-bg.com:4300/users/login"));
+
         /*String expectedLoginURL = "http://training.skillo-bg.com:4300/users/login";
         String actualLoginURL = driver.getCurrentUrl();
         Assert.assertEquals(actualLoginURL, expectedLoginURL);*/
 
+
+
         WebElement signInTitle = driver.findElement(By.xpath("//p[text()='Sign in']"));
-        Assert.assertTrue(signInTitle.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOf(signInTitle));
 
         WebElement username = driver.findElement(By.id("defaultLoginFormUsername"));
         username.sendKeys("earnaudova@gmail.com");
