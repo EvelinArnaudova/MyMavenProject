@@ -35,8 +35,6 @@ public class lecture13 {
         String actualLoginURL = driver.getCurrentUrl();
         Assert.assertEquals(actualLoginURL, expectedLoginURL);*/
 
-
-
         WebElement signInTitle = driver.findElement(By.xpath("//p[text()='Sign in']"));
         wait.until(ExpectedConditions.visibilityOf(signInTitle));
 
